@@ -42,7 +42,7 @@ end
   'macedonia',
   'philippines', 'puerto-rico',
   'russia',
-  'spain', 'sweden',
+  'spain', 'sweden', 'south-africa',
   'uk', 'usa'
 ].each do |country|
   load File.join(File.dirname(__FILE__), 'countries', country + '.rb');
@@ -177,8 +177,6 @@ end
     'slovak' => 'Slovakia',
     'slovak pop' => 'Slovakia',
     'slovak stream' => 'Slovakia',
-    'south africa' => 'South Africa',
-    'south african' => 'South Africa',
     'swiss' => 'Switzerland',
     'switzerland' => 'Switzerland',
     'taiwan' => 'Taiwan',
