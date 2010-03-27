@@ -1,7 +1,6 @@
-# Country related tags
-
 [
-  'american', 'americana', 'american pop', 'american street punk',
+# Country related tags
+  'american', 'americana', 'american pop', 'american street punk', 'america',
   'brooklyn',
   'california', 'californian punk', 'california punk',
   'detroit',
@@ -9,22 +8,19 @@
   'iowa',
   'jacksonville',
   'kentucky',
-  'louisville',
+  'louisville', 'los angeles',
   'minnesota',
   'new wave of american metal', 'new york', 'new york city', 'nyc',
+  'pennsylvania',
   'orange county',
   'san diego', 'seattle', 'seattle sound', 'seattle eclectica', 'san francisco',
   'texas punk',
   'united states', 'usa', 'us',
-  'washington artists'
-].each do |tag|
-  Classification::Resolver.add_mapping tag, 'United States'
-end
-
+  'washington artists',
 # Artists (tags) from the US
-[
-  'black kids',
-  'lady gaga', 'ladygaga'
+  'black kids', 'bloodhound gang',
+  'lady gaga', 'ladygaga',
+  'metro station', 'mason musso'
 ].each do |tag|
   Classification::Resolver.add_mapping tag, 'United States'
 end
