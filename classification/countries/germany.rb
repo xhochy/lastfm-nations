@@ -29,7 +29,7 @@
   'music that makes me proud of being german',
   'neudeutsch', 'neo ndw', 'neue deutsche welle', 'norddeutsch',
   'rock - made in germany', 'rock german',
-# Artists (tags) from Germany
+# Artists (tags)
   'andreas herde',
   'beginner',
   'dendemann',
