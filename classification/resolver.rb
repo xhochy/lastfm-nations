@@ -53,8 +53,9 @@ end
   'cameroon', 'canada', 'china', 'chile', 'colombia', 'cape-verde', 'cuba',
   'cyprus', 'czech-republic', 'croatia',
   'democratic-republic-of-the-congo', 'denmark',
-  'france',
-  'germany',
+  'estonia',
+  'france', 'faroe-islands', 'finland',
+  'germany', 'greece',
   'ireland', 'island-of-dominica', 'ivory-coast', 'italy', 'iceland',
   'japan',
   'lebanon', 'luxembourg',
@@ -69,15 +70,6 @@ end
 end
 
 =begin
-    'estonia' => 'Estonia',
-    'estonian' => 'Estonia',
-    'faroe islands' => 'Faroe Islands',
-    'faroese' => 'Faroe Islands',
-    'faroese metal' => 'Faroe Islands',
-    'finnish' => 'Finland',
-    'finland' => 'Finland',
-    'greek' => 'Greece',
-    'greece' => 'Greece',
     'hungarian' => 'Hungary',
     'hungary' => 'Hungary',
     'iran' => 'Iran',
