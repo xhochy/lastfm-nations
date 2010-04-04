@@ -1,4 +1,4 @@
-SOURCE_FILES = ['classification/**/*.rb']
+SOURCE_FILES = FileList['classification/**/*.rb'].to_a
 
 # =======================
 # = Documentation tasks =
@@ -15,7 +15,16 @@ begin
 
 rescue LoadError
   desc 'You need the `yard` gem to generate documentation'
-  task :documentation
+  task :doc
+end
+
+# =======================
+# = Code review tasks =
+# =======================
+desc 'Run various code review tools on the source'
+task :codereview do
+  puts `reek -q #{SOURCE_FILES.join(' ')}`
+  puts `roodi #{SOURCE_FILES.join(' ')}`
 end
 
 desc 'Removes all build producs'
