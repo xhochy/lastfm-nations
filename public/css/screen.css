@@ -31,4 +31,9 @@ ul, ol {
 
 .recognized-tag {
   color: green;
+  display: inline;
+}
+
+.unrecognized-tag {
+  display: inline;
 }

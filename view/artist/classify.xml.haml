@@ -1,0 +1,16 @@
+%classification
+  %artist= @title
+  - unless @country.nil?
+    %country= @country
+  - unless @countries.nil?
+    %countries
+      - @countries.each do |country,count|
+        %country{ :score => count}= country
+  - unless @recognized_tags.nil?
+    %recognized-tags
+      - @recognized_tags.each do |tag, count|
+        %tag{ :count => count }= tag      
+  - unless @unrecognized_tags.nil?
+    %unrecognized-tags
+      - @unrecognized_tags.each do |tag, count|
+        %tag{ :count => count }= tag      

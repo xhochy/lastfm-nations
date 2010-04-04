@@ -8,6 +8,7 @@ require 'ramaze'
 
 # Make sure that Ramaze knows where you are
 Ramaze.options.roots = [__DIR__]
+Ramaze.options.adapter.adapter = :mongrel
 
 require __DIR__('classification/resolver')
 

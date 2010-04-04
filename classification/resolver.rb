@@ -56,11 +56,12 @@ module Classification
   
     # Classify an artist by its tags on Last.fm.
     #
+    # Extended version: Returns all possible countries.
+    #
     # @param [Array<Scrobbler::Tag>] tags The artist's tags from Last.FM
     # @return [Hash<String, Fixnum>] The countries this artist may belong to and
-    #                                their score (a higher score => probability
-    #                                is higher)
-    def by_scrobbler_tags(tags)
+    #   their score (a higher score => probability is higher)
+    def by_scrobbler_tags_ex(tags)
       countries = {}
       tags.each do |tag|
         # by default we only handle tags case-insensitive
@@ -71,6 +72,16 @@ module Classification
       end
       
       countries
+    end
+    
+    
+    # Classify an artist by its tags on Last.fm.
+    #
+    # @param [Array<Scrobbler::Tag>] tags The artist's tags from Last.FM
+    # @return [Hash<String, Fixnum>] The country this artist may belong to
+    def by_scrobbler_tags(tags)
+      result = by_scrobbler_tags_ex(tags).to_a.each { |s| s.reverse! }.max
+      result[0] unless result.nil?
     end
     
    

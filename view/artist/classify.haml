@@ -1,0 +1,15 @@
+- unless @country.nil?
+  .country= @country
+- unless @countries.nil?
+  .countries
+    - @countries.each do |country,count|
+      .country #{country} -> #{count}
+%br/
+- unless @recognized_tags.nil?
+  .recognized-tags
+    - @recognized_tags.each do |tag, count|
+      .recognized-tag #{tag} (#{count})
+- unless @unrecognized_tags.nil?
+  .unrecognized-tags
+    - @unrecognized_tags.each do |tag, count|
+      .unrecognized-tag #{tag} (#{count})

@@ -1,4 +1,4 @@
-SOURCE_FILES = FileList['classification/**/*.rb'].to_a
+SOURCE_FILES = FileList['classification/**/*.rb', 'controller/*.rb'].to_a
 
 # =======================
 # = Documentation tasks =
