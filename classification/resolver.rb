@@ -1,11 +1,22 @@
 module Classification
   module Resolver
+    # Internal hasmap to store the tag to country mappings.
     @@tag_map = {}
     
+    # Add a tag => country mapping to the list.
+    #
+    # @param [String] tag The tag mapped to the country (case-insensitive)
+    # @param [String] country The country identified be tag (case-sensitive)
     def self.add_mapping(tag, country)
-      @@tag_map[tag] = country
+      @@tag_map[tag.downcase] = country
     end
   
+    # Classify an artist by its tags on Last.fm.
+    #
+    # @param [Array<Scrobbler::Tag>] tags The artist's tags from Last.FM
+    # @return [Hash<String, Fixnum>] The countries this artist may belong to and
+    #                                their score (a higher score => probability
+    #                                is higher)
     def self.by_scrobbler_tags(tags)
       countries = {}
       tags.each do |stag|
@@ -23,6 +34,11 @@ module Classification
       countries
     end
     
+    # Do we already know about a tag?
+    #
+    # @param [String] tag The tag that should be checked if we already have a
+    #                     mapping including it.
+    # @return [Boolean] True, if there is a mapping including this tag.
     def self.has_tag?(tag)
       @@tag_map.has_key?(tag.downcase)
     end
