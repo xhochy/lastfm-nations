@@ -1,3 +1,5 @@
 %ol
   - @artists.each do |artist|
-    %li #{artist[0]} (#{artist[1]}) -> #{artist[2]}
+    %li
+      %a{ :href => "/artist/info/#{artist[0]}"} #{artist[0]} 
+      (#{artist[1]}) -> #{artist[2]}
