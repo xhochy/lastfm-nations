@@ -1,7 +1,3 @@
-require 'scrobbler'
-
-require File.join(File.dirname(__FILE__), '..', 'api-key')
-
 class ArtistController < Controller
   engine :Haml
   layout :default
