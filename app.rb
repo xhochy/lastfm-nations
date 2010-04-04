@@ -23,4 +23,6 @@ require __DIR__('classification/resolver')
 require __DIR__('model/init')
 require __DIR__('controller/init')
 
+DataMapper.auto_migrate!
+
 

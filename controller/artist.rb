@@ -5,12 +5,18 @@ class ArtistController < Controller
   
   COUNTRY_FILES = File.join(File.dirname(__FILE__), '..', 'classification',
     'countries', '*.yml')
-
+    
   def self.init_resolver
     Classification::Resolver.new(:source => :files, :files => COUNTRY_FILES)
   end
-
+  
   def classify(name)
+    @resolver = ArtistController::init_resolver if @resolver.nil?
+    @title = name
+    @country = @resolver.by_scrobbler_tags(Scrobbler::Artist.new(name).top_tags)
+  end
+
+  def info(name)
     @resolver = ArtistController::init_resolver if @resolver.nil?
     @title = name
     artist = Scrobbler::Artist.new(name)

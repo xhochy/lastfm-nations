@@ -1,0 +1,10 @@
+.countries
+  - @countries.each do |country,count|
+    .country #{country} -> #{count}
+%br/
+.recognized-tags
+  - @recognized_tags.each do |tag, count|
+    .recognized-tag #{tag} (#{count})
+.unrecognized-tags
+  - @unrecognized_tags.each do |tag, count|
+    .unrecognized-tag #{tag} (#{count})

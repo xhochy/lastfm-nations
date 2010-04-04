@@ -1,0 +1,11 @@
+%classification
+  %artist= @title
+  %countries
+    - @countries.each do |country,count|
+      %country{ :score => count}= country
+  %recognized-tags
+    - @recognized_tags.each do |tag, count|
+      %tag{ :count => count }= tag      
+  %unrecognized-tags
+    - @unrecognized_tags.each do |tag, count|
+      %tag{ :count => count }= tag      
