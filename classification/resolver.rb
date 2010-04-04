@@ -81,7 +81,7 @@ module Classification
     # @return [Hash<String, Fixnum>] The country this artist may belong to
     def by_scrobbler_tags(tags)
       result = by_scrobbler_tags_ex(tags).to_a.each { |s| s.reverse! }.max
-      result[0] unless result.nil?
+      result[1] unless result.nil?
     end
     
    

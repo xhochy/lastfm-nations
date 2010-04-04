@@ -17,7 +17,11 @@ require 'local-config'
 Ramaze.options.roots = [__DIR__]
 Ramaze.options.adapter.adapter = :mongrel
 
+# Load the Classification backend
 require __DIR__('classification/resolver')
+$resolver = Classification::Resolver.new(:source => :files, :files => 
+  File.join(File.dirname(__FILE__), 'classification', 'countries', 
+    '*.yml'))
 
 # Initialize controllers and models
 require __DIR__('model/init')

@@ -1,0 +1,4 @@
+%username= @title
+%artists
+  - @artists.each do |artist|
+    %artist{ :count => artist[1], :country => artist[2] } #{artist[0]}
