@@ -5,12 +5,12 @@ class ArtistController < Controller
   
   def classify(name)
     @title = name
-    @country = $resolver.by_scrobbler_tags(Scrobbler::Artist.new(name).top_tags)
+    @country = $resolver.by_scrobbler_tags(Scrobbler::Artist.new(:name => name).top_tags)
   end
 
   def info(name)
     @title = name
-    artist = Scrobbler::Artist.new(name)
+    artist = Scrobbler::Artist.new(:name => name)
     top_tags = artist.top_tags
     @countries = $resolver.by_scrobbler_tags_ex(top_tags)
     @recognized_tags = {}
