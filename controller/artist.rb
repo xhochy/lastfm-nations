@@ -1,3 +1,4 @@
+=begin
 class ArtistController < Controller
   engine :Haml
   layout :default
@@ -25,3 +26,6 @@ class ArtistController < Controller
   end
 
 end
+=end
+
+

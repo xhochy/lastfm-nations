@@ -5,9 +5,10 @@
 
 # Include needed gems
 require 'rubygems'
-require 'sinatra/base'
-require 'scrobbler'
 require 'dm-core'
+require 'haml'
+require 'scrobbler'
+require 'sinatra/base'
 
 # Include local configuration
 require 'local-config'
@@ -20,10 +21,25 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
 
 DataMapper.auto_migrate!
 
-
+# Load the Controllers
 class LastFMNations < Sinatra::Base
   get '/' do
-    'Hello World!'
+    'This is the Nationality Statistics Server.'
   end
+  
+  get '/artist/classify/:name.:format' do
+    @name = params[:name]
+    @title = @name 
+    @country = $resolver.by_scrobbler_tags(Scrobbler::Artist.new(:name => @name).top_tags)
+    case params[:format]
+      when 'xml'
+        return haml :artist_classify_xml
+      when 'xhtml'
+        return haml :artist_classify_xhtml
+      else
+        halt 404
+    end
+  end
+
 end
 
