@@ -1,10 +1,18 @@
 .countries
-  - @countries.each do |country,count|
-    .country #{country} -> #{count}
-%br/
-.recognized-tags
-  - @recognized_tags.each do |tag, count|
-    .recognized-tag #{tag} (#{count})
-.unrecognized-tags
-  - @unrecognized_tags.each do |tag, count|
-    .unrecognized-tag #{tag.downcase} (#{count})
+  %h2 Countries
+  .box1
+    - @countries.each do |country,count|
+      .country #{country} (#{count})
+.two-columns
+  .recognized-tags.colA
+    %div
+      %h3 Recognized Tags
+      .content
+        - @recognized_tags.each do |tag, count|
+          .recognized-tag #{tag.downcase} (#{count})
+  .unrecognized-tags.colB
+    %div
+      %h3 Unrecognized Tags
+      .content
+        - @unrecognized_tags.each do |tag, count|
+          .unrecognized-tag #{tag.downcase} (#{count})

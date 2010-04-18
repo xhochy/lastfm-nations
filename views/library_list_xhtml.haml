@@ -1,5 +1,15 @@
-%ol
-  - @artists.each do |artist|
-    %li
-      %a{ :href => "/artist/info/#{artist[0]}"} #{artist[0]} 
-      (#{artist[1]}) -> #{artist[2]}
+.two-columns
+  .colA
+    %div
+      %h3 Charts
+      .content
+        Emtpy.
+  .colB
+    %div
+      %h3 Artists
+      .content
+        %ol
+          - @artists.each do |artist|
+            %li
+              %a{ :href => "/artist/info/#{artist[0]}.xhtml"} #{artist[0]} 
+              (#{artist[1]}) -> #{artist[2]}

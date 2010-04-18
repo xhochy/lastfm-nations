@@ -1,0 +1,263 @@
+/*
+Template Design by TheWebhub.com
+http://www.thewebhub.com
+Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines
+*/
+
+/** Common Styles */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #333333 url(images/images01.jpg) repeat-x left top;
+	text-align: justify;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #959595;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+p {
+	margin: 0px;
+	padding: 0px;
+	line-height: 2em;
+}
+
+ul {
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style-type: none;
+}
+
+a {
+	color: #D70302;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/** HEADER */
+
+#header {
+	width: 900px;
+	height: 180px;
+	margin: 0px auto;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+}
+
+/** LOGO */
+
+#logo {
+	float: left;
+	width: 300px;
+	height: 180px;
+	background: #C90202 url(images/images03.jpg) no-repeat left top;
+}
+
+#logo h1 {
+	margin: 0px;
+	padding: 70px 0px 0px 0px;
+	letter-spacing: -3px;
+	text-align: center;
+	font-size: 48px;
+	color: #FFFFFF;
+}
+
+#logo h2 {
+	margin: -10px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	letter-spacing: -2px;
+	text-align: center;
+	text-transform: lowercase;
+	font-size: 30px;
+	color: #000000;
+}
+
+/** MENU */
+
+#menu {
+	float: right;
+	width: 600px;
+	height: 50px;
+}
+
+#menu ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	width: 120px;
+	height: 34px;
+	background: url(images/images02.jpg) no-repeat right top; 
+	margin: 0px 0px 0px 0px;
+	padding: 16px 0px 0px 0px;
+	letter-spacing: -1px;
+	text-align: center;
+	text-transform: lowercase;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 22px;
+	color: #747474;
+}
+
+#menu a:hover {
+	color: #FFFFFF;
+}
+
+#menu .active {
+	color: #FFFFFF;
+}
+
+/** CONTENT */
+
+#content-wrap {
+}
+
+#content {
+	width: 860px;
+	margin: 0px auto;
+	padding: 30px 20px 30px 20px;
+}
+
+#columnA {
+	float: right;
+	width: 540px;
+	margin-top: -140px;
+}
+
+#columnA h2 {
+	margin: 0px;
+	padding: 30px 0px 10px 0px;
+	letter-spacing: -2px;
+	text-transform: lowercase;
+	font-size: 34px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+#columnB {
+	float: left;
+	width: 260px;
+}
+
+#columnB h2 {
+	margin: 0px;
+	padding: 0px 0px 10px 0px;
+	letter-spacing: -2px;
+	text-transform: lowercase;
+	font-size: 26px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+#columnB strong {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #575757;
+}
+
+
+/** FOOTER */
+
+#footer-wrapper {
+	height: 100px;
+	background: #000000;
+}
+
+#footer {
+	width: 900px;
+	height: 100px;
+	margin: 0px auto;
+	background: #000000;
+	font-size: 11px;
+	color: #4C4C4C;
+}
+
+#footer p {
+	margin: 0;
+	padding: 30px 0px;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+#footer a {
+}
+
+.box {
+	background: #1B1B1B;
+}
+
+.box .content {
+	margin-bottom: 30px;
+	padding: 20px 20px;
+	line-height: 2em;
+}
+
+.box ul {
+	line-height: 1.8em;
+}
+
+.box li a {
+	padding: 0px 0px 0px 12px;
+	background: url(images/images04.gif) no-repeat left 6px;
+	color: #717171;
+}
+
+.box a {
+	color: #717171;
+}
+
+.box h3 {
+	padding: 0px 0px 10px 0px;
+	color: #FFFFFF;
+}
+
+.box1 {
+	margin-bottom: 20px;
+}
+
+.two-columns {
+	margin-top: 5px;
+}
+
+.two-columns .colA {
+	float: left;
+	width: 260px;
+	background: #1B1B1B;
+}
+
+.two-columns .colB {
+	float: right;
+	width: 260px;
+	background: #1B1B1B;
+}
+
+.two-columns .content {
+	padding: 10px 20px 20px 20px;
+	line-height: 2em;
+}
+
+.two-columns .style1 {}
+
+.two-columns h3 {
+	margin: 0px;
+	padding: 15px 10px 15px 20px;
+	background: #000000;
+}

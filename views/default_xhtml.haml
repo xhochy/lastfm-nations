@@ -4,7 +4,21 @@
   %head
     %title
       #{@title}
+  %link{ :href => "/default.css", :rel => "stylesheet", :type => "text/css", :media => "screen"}
   %body
-    %h1
-      #{@title}
-    #content #{@content}
+    #header
+      #logo
+        %h1 #{@title}
+    #content-wrap
+      #content 
+        #columnA #{@content}
+        %div{ :style => "clear: both;"}
+      
+    #footer-wrapper
+      #footer
+        %p
+          Copyright &copy; 2006/2009-2010 
+          %a{ :href => "http://xhochy.org/"} XhochY.
+          Template Designed by 
+          %a{ :href =>"http://www.thewebhub.com/"}TheWebHub.com
+

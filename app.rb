@@ -24,6 +24,8 @@ DataMapper.auto_migrate!
 # Load the Controllers
 class LastFMNations < Sinatra::Base
 
+  set :public, File.dirname(__FILE__) + '/public'
+
   get '/' do
     'This is the Nationality Statistics Server.'
   end
