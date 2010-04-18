@@ -2,3 +2,4 @@ api-key.rb
 .yardoc
 build
 local-config.rb
+tmp
