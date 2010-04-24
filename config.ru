@@ -7,7 +7,9 @@
 # application as FastCGI, CGI, or standalone with Mongrel or WEBrick -- all from
 # the same configuration.
 #
+require 'appengine-rack'
 require './app'
 
-run LastFMNations
+AppEngine::Rack.configure_app(:application => "lastfm-nations", :version => 1)
 
+run LastFMNations

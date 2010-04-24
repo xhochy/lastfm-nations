@@ -19,7 +19,7 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
   File.join(File.dirname(__FILE__), 'lib', 'classification', 'countries', 
     '*.yml'))
 
-DataMapper.auto_migrate!
+#DataMapper.auto_migrate!
 
 # Load the Controllers
 class LastFMNations < Sinatra::Base
