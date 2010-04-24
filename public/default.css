@@ -59,13 +59,13 @@ a:hover {
 #logo {
 	float: left;
 	width: 300px;
-	height: 180px;
-	background: #C90202 url(images/images03.jpg) no-repeat left top;
+	/*height: 180px;*/
+	background: #C90202 no-repeat left top; /* url(images/images03.jpg) */
 }
 
 #logo h1 {
 	margin: 0px;
-	padding: 70px 0px 0px 0px;
+	padding: 30px 0px 30px 0px;
 	letter-spacing: -3px;
 	text-align: center;
 	font-size: 48px;
