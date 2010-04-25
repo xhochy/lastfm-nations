@@ -14,7 +14,7 @@ require 'sinatra/base'
 require 'local-config'
 
 # Load the Classification backend
-require File.join(File.dirname(__FILE__), 'lib', 'classification', 'resolver')
+require 'lib/classification/resolver'
 require File.join(File.dirname(__FILE__), 'lib', 'scrobbler-ng', 'rest.rb')
 $resolver = Classification::Resolver.new(:source => :files, :files => 
   File.join(File.dirname(__FILE__), 'lib', 'classification', 'countries', 
