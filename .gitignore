@@ -3,3 +3,6 @@ api-key.rb
 build
 local-config.rb
 tmp
+.gems
+WEB-INF
+bin
