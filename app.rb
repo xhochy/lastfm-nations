@@ -19,6 +19,7 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
   File.join(File.dirname(__FILE__), 'lib', 'classification', 'countries', 
     '*.yml'))
 
+# Load the database models
 DataMapper.auto_migrate!
 
 # Load the Controllers
