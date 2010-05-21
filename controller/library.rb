@@ -14,7 +14,7 @@ class LastFMNations
     # Render
     case params[:format]
       when 'xml'
-        @content = haml :library_lits_xml
+        @content = haml :library_list_xml
         return haml :default_xml
       when 'xhtml'
         @content = haml :library_list_xhtml
