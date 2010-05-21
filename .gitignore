@@ -6,3 +6,6 @@ tmp
 .gems
 WEB-INF
 bin
+.loadpath
+.project
+db.sqlite3
