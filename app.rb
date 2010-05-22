@@ -20,6 +20,9 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
     '*.yml'))
 
 # Load the database models
+require 'model/artist'
+require 'model/playcount'
+require 'model/library'
 DataMapper.auto_migrate!
 
 # Load the Controllers
@@ -35,4 +38,3 @@ end
 
 require 'controller/library'
 require 'controller/artist'
-

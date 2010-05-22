@@ -1,8 +1,7 @@
 class Artist
   include DataMapper::Resource
 
-  property :id,             Serial
-  property :name,           String
-  property :country,        Text
-  property :last_update_at, DateTime
+  property :name, String, :key => true
+  property :country, String
+  has n, :playcounts
 end
