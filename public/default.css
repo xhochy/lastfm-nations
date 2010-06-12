@@ -138,8 +138,8 @@ a:hover {
 
 #columnA {
 	float: right;
-	width: 540px;
-	margin-top: -140px;
+	width: 860px;
+	margin-top: -75px;
 }
 
 #columnA h2 {
@@ -239,13 +239,13 @@ a:hover {
 
 .two-columns .colA {
 	float: left;
-	width: 260px;
+	width: 400px;
 	background: #1B1B1B;
 }
 
 .two-columns .colB {
 	float: right;
-	width: 260px;
+	width: 400px;
 	background: #1B1B1B;
 }
 
@@ -260,4 +260,8 @@ a:hover {
 	margin: 0px;
 	padding: 15px 10px 15px 20px;
 	background: #000000;
+}
+img.chart {
+  border: 1px solid black;
+  background: #fff;
 }

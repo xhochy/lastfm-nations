@@ -35,6 +35,46 @@ class LastFMNations
     end
     @title = @name
     
+    countries = {}
+    @artists.each do |artist|
+      country = artist.at(2)
+      if countries[country].nil?
+        countries[country] = artist.at(1)
+      else 
+        countries[country] += artist.at(1)
+      end
+    end
+    countries = countries.to_a
+    countries.sort_by{|i| -i[1]}
+    
+    playcounts = []
+    country_strings = []
+    others = 0
+    countries.each do |country|
+      # Do not list countries with nearly no scrobbles
+      if not country[1] < (0.025 * countries[0][1]) then
+        country[0] = "UK" if country[0] == "United Kingdom"
+        playcounts << (country[1]*100)/countries[0][1]
+        if country[0] == "United Kingdom" then
+          country_strings << "UK"
+        elsif country[0] == "United States" then
+          country_strings << "USA"
+        else  
+          country_strings << country[0]
+        end
+      else
+        others += country[1]
+      end
+    end
+    if others > 0 then
+      playcounts << others
+      country_strings << "Others"
+    end
+    
+    @pie_chart_url = "http://chart.apis.google.com/chart?cht=p&chf=bg,s," + 
+      "e3e3e300&chs=350x150&chd=t:" + playcounts.join(",") + "&chl=" + 
+      country_strings.join("|")
+    
     # Render
     case params[:format]
       when 'xml'

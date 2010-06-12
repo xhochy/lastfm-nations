@@ -8,4 +8,4 @@ WEB-INF
 bin
 .loadpath
 .project
-db.sqlite3
+*.sqlite3

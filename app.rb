@@ -23,7 +23,7 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
 require 'model/artist'
 require 'model/playcount'
 require 'model/library'
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 # Load the Controllers
 class LastFMNations < Sinatra::Base
