@@ -5,6 +5,9 @@
 
 # Include needed gems
 require 'rubygems'
+require 'bundler'
+Bundler.setup 
+
 require 'dm-core'
 require 'haml'
 require 'scrobbler'
@@ -20,7 +23,11 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
   File.join(File.dirname(__FILE__), 'lib', 'classification', 'countries', 
     '*.yml'))
 
-#DataMapper.auto_migrate!
+# Load the database models
+require 'model/artist'
+require 'model/playcount'
+require 'model/library'
+DataMapper.auto_upgrade!
 
 # Load the Controllers
 class LastFMNations < Sinatra::Base
@@ -35,4 +42,3 @@ end
 
 require 'controller/library'
 require 'controller/artist'
-

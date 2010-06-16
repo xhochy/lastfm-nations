@@ -6,3 +6,7 @@ tmp
 bin
 WEB-INF
 .gems
+.loadpath
+.project
+*.sqlite3
+.bundle
