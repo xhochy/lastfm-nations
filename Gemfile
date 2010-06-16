@@ -1,3 +1,5 @@
+source :gemcutter
+
 gem "sinatra"
 gem "dm-core", "0.10.2"
 gem "haml"
