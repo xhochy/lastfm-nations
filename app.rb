@@ -5,9 +5,6 @@
 
 # Include needed gems
 require 'rubygems'
-require 'bundler'
-Bundler.setup 
-
 require 'dm-core'
 require 'haml'
 require 'scrobbler'
