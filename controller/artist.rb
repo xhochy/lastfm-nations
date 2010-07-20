@@ -1,3 +1,4 @@
+# Main class for all Requests
 class LastFMNations
   
   get '/artist/classify/:name.:format' do

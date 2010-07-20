@@ -22,6 +22,9 @@ $resolver = Classification::Resolver.new(:source => :files, :files =>
   File.join(File.dirname(__FILE__), 'lib', 'classification', 'countries', 
     '*.yml'))
 
+# Load the helper functions
+require 'lib/helper'
+
 # Load the database models
 require 'model/artist'
 require 'model/playcount'
@@ -30,6 +33,8 @@ DataMapper.auto_upgrade!
 
 # Load the Controllers
 class LastFMNations < Sinatra::Base
+
+  include Helper
 
   set :public, File.dirname(__FILE__) + '/public'
 
